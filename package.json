@@ -4,7 +4,8 @@
   "description": "Code challenge Red Badger",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "jest --watch"
   },
   "main": "index.js",
   "author": "dahfool",
