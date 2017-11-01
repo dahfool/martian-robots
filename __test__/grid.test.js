@@ -1,4 +1,4 @@
-import { createGrid } from '../grid'
+import { createGrid, updateGrid } from '../grid'
 
 
 describe('Grid', () => {
@@ -21,6 +21,29 @@ describe('Grid', () => {
             ['x','x','x','x','x']
         ]);
     });
+
+    it('Update grid',() => {
+
+        let grid =  [
+            ['x','x','x','x','x'],
+            ['x','x','x','x','x'],
+            ['x','x','x','x','x'],
+        ];
+
+        expect(updateGrid(grid,[0,0],[2,3])).toEqual([
+            ['x','robot','x','x','x'],
+            ['x','x','x','x','x'],
+            ['x','x','x','x','x']
+        ]);
+
+        expect(updateGrid(grid,[0,0],[5,3])).toEqual([
+            ['x','x','x','x','robot'],
+            ['x','x','x','x','x'],
+            ['x','x','x','x','x']
+        ]);
+
+
+    })
 
 });
 

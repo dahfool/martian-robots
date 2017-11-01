@@ -10,3 +10,12 @@ export const createGrid = (x, y) => {
     }
     return grid;
 };
+
+
+export const updateGrid = (grid, currentPosition, newPosition) => {
+
+    const updatedGrid = grid.map(arr => arr.slice());
+
+    updatedGrid[newPosition[1]-1][newPosition[0]-1] = 'robot';
+    return updatedGrid.reverse();
+};

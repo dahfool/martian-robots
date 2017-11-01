@@ -1,9 +1,15 @@
 import { move } from '../direction'
 
+let grid = [
+    ['x','x','x','x','x'],
+    ['x','x','x','x','x'],
+    ['x','x','x','x','x']
+];
+
 describe('Direction', () => {
 
     it('Move left ', () => {
-        expect(move('L')).toBe([]);
+        expect(move('L', [1,2], grid)).toBe([]);
     });
 
     it('Move right ', () => {
@@ -11,7 +17,7 @@ describe('Direction', () => {
     });
 
     it('Move forward ', () => {
-        expect(move('F')).toBe([]);
+        expect(move('F', [1,1], grid)).toEqual([1,2]);
     });
 
 });
