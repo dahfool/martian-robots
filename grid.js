@@ -2,20 +2,25 @@ export const createGrid = (x, y) => {
 
     let grid = [];
 
-    for (let i = 0; i < y; i++) {
+    let i = 0;
+    while (i <= y) {
         grid.push([]);
-        for(let r = 0; r < x; r++) {
-            grid[i].push('x')
+        let r = 0;
+        while (r <= x) {
+            grid[i].push('x');
+            r++
         }
+        i++;
     }
+
     return grid;
 };
 
 
-export const updateGrid = (grid, currentPosition, newPosition) => {
+export const updateGrid = (grid, position) => {
 
     const updatedGrid = grid.map(arr => arr.slice());
 
-    updatedGrid[newPosition[1]-1][newPosition[0]-1] = 'robot';
+    updatedGrid[position[1]][position[0]] = 'robot';
     return updatedGrid.reverse();
 };
