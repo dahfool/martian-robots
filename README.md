@@ -10,3 +10,7 @@ Runs the application
 ### `npm test`
 
 Launches the test runner 
+
+### `npm run test`
+
+Launches the test runner and for changes 
