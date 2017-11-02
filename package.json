@@ -4,7 +4,7 @@
   "description": "Code challenge Red Badger",
   "scripts": {
     "test": "jest",
-    "start": "node index.js",
+    "start": "node_modules/.bin/babel-node  index.js",
     "watch": "jest --watch"
   },
   "main": "index.js",

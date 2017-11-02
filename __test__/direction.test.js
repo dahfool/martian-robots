@@ -1,23 +1,21 @@
-import { move } from '../direction'
-
-let grid = [
-    ['x','x','x','x','x'],
-    ['x','x','x','x','x'],
-    ['x','x','x','x','x']
-];
+import { position } from '../direction'
 
 describe('Direction', () => {
 
     it('Move left ', () => {
-        expect(move('L', [1,2], grid)).toBe([]);
+        expect(position([1,1],'W')).toEqual([1,0]);
+    });
+
+    it('Move up ', () => {
+        expect(position([1,1],'N')).toEqual([0,1]);
     });
 
     it('Move right ', () => {
-        expect(move('R')).toBe([]);
+        expect(position([1,1],'E')).toEqual([1,2]);
     });
 
-    it('Move forward ', () => {
-        expect(move('F', [1,1], grid)).toEqual([1,2]);
+    it('Move down ', () => {
+        expect(position([1,1],'S')).toEqual([2,1]);
     });
 
 });
