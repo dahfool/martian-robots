@@ -3,19 +3,19 @@ import { orientate } from '../orientation'
 describe('Orientation', () => {
 
     it('Set orientation to North ', () => {
-        expect(orientate('N')).toBe([]);
+        expect(orientate('R', 'W')).toBe('N');
     });
 
     it('Set orientation to South ', () => {
-        expect(orientate('S')).toBe([]);
+        expect(orientate('L', 'W')).toBe('S');
     });
 
     it('Set orientation to East ', () => {
-        expect(orientate('E')).toBe([]);
+        expect(orientate('R', 'N')).toBe('E');
     });
 
     it('Set orientation to West ', () => {
-        expect(orientate('W')).toBe([]);
+        expect(orientate('L','N')).toBe('W');
     });
 
 });
